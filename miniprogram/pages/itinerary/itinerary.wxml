@@ -1,0 +1,5 @@
+<view class="page itinerary-page">
+  <view class="itinerary-head"><text class="eyebrow">MY HENAN</text><text class="page-title">我的行程</text><text class="subtle">把想去的地方排成一条线，出发时随手查看。</text></view>
+  <view wx:if="{{empty}}" class="empty-panel"><text class="empty-mark">山</text><text class="empty-title">行程还是空的</text><text class="subtle">先收藏一个目的地，或者把它加入你的下一站。</text><button bindtap="discover">去发现景点</button></view>
+  <view wx:else class="timeline"><view wx:for="{{entries}}" wx:key="spotId" class="timeline-item"><view class="timeline-date"><text>{{item.date}}</text><text>{{item.position}}</text></view><view class="itinerary-card" bindtap="openSpot" data-id="{{item.spotId}}"><image src="{{item.cover}}" mode="aspectFill"/><view class="itinerary-body"><text class="itinerary-city">{{item.city}}</text><text class="itinerary-name">{{item.name}}</text><text class="itinerary-link">查看详情 →</text></view><button class="remove" catchtap="remove" data-id="{{item.spotId}}">×</button></view></view></view>
+</view>

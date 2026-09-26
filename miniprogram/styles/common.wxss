@@ -1,0 +1,6 @@
+page { background: #f4f0e7; color: #1e2420; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+button { box-sizing: border-box; }
+.page-title { margin: 0; font-family: serif; font-size: 48rpx; font-weight: 600; }
+.subtle { color: #77756d; font-size: 24rpx; }
+.empty { padding: 140rpx 42rpx; color: #77756d; text-align: center; font-size: 26rpx; }
+.toast { position: fixed; left: 50%; bottom: 130rpx; z-index: 30; transform: translateX(-50%); padding: 18rpx 26rpx; border-radius: 6rpx; background: rgba(30,36,32,.9); color: #fff; font-size: 24rpx; }

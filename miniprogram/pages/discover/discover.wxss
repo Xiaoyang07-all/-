@@ -1,0 +1,25 @@
+@import "../../styles/common.wxss";
+.discover-page { padding-bottom: 40rpx; }
+.discover-head { padding: 48rpx 42rpx 28rpx; }
+.discover-head .page-title { display: block; margin-top: 14rpx; }
+.discover-head .subtle { display: block; margin-top: 16rpx; line-height: 1.7; }
+.search-box { display: flex; align-items: center; gap: 14rpx; height: 74rpx; margin: 0 42rpx 24rpx; padding: 0 22rpx; border: 1px solid rgba(30,36,32,.16); background: #fffdf8; color: #a93f2d; }
+.search-box text { font-size: 34rpx; }
+.search-box input { flex: 1; height: 100%; color: #1e2420; font-size: 26rpx; }
+.category-scroll { width: 100%; white-space: nowrap; }
+.category-row { display: inline-flex; gap: 16rpx; padding: 0 42rpx 30rpx; }
+.category { padding: 14rpx 22rpx; border: 1px solid rgba(30,36,32,.16); color: #77756d; font-size: 23rpx; }
+.category.active { border-color: #a93f2d; background: #a93f2d; color: white; }
+.loading, .error-panel { min-height: 45vh; display: flex; align-items: center; justify-content: center; gap: 18rpx; color: #77756d; font-size: 26rpx; }
+.error-panel { flex-direction: column; }
+.error-panel button { margin: 0; border: 1px solid #a93f2d; border-radius: 4rpx; background: transparent; color: #a93f2d; font-size: 24rpx; }
+.spot-list { display: grid; gap: 18rpx; padding: 0 42rpx; }
+.list-card { position: relative; display: flex; min-height: 220rpx; overflow: hidden; background: #fffdf8; box-shadow: 0 8rpx 24rpx rgba(30,25,18,.07); }
+.list-card image { width: 238rpx; height: 220rpx; flex: 0 0 238rpx; }
+.list-body { min-width: 0; padding: 22rpx 56rpx 18rpx 22rpx; }
+.list-meta { display: flex; gap: 12rpx; color: #a93f2d; font-size: 19rpx; }
+.list-name { display: block; margin-top: 10rpx; font-family: serif; font-size: 34rpx; }
+.list-tagline { display: block; margin-top: 8rpx; overflow: hidden; color: #77756d; font-size: 22rpx; text-overflow: ellipsis; white-space: nowrap; }
+.list-ticket { display: block; margin-top: 18rpx; color: #77756d; font-size: 20rpx; }
+.bookmark { position: absolute; right: 18rpx; top: 18rpx; width: 52rpx; height: 52rpx; margin: 0; padding: 0; border: 0; background: rgba(255,253,248,.88); color: #77756d; font-size: 34rpx; line-height: 52rpx; }
+.bookmark.active { color: #a93f2d; }

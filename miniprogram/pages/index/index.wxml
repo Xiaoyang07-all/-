@@ -1,0 +1,15 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="loading"><text>正在展开中原画卷</text></view>
+  <view wx:elif="{{error}}" class="error-panel"><text>{{error}}</text><button bindtap="loadSpots">重新连接</button></view>
+  <block wx:else>
+    <view class="hero" wx:if="{{hero}}" bindtap="openSpot" data-id="{{hero.id}}">
+      <image class="hero-image" src="{{hero.cover}}" mode="aspectFill" lazy-load="true" />
+      <view class="hero-shade"></view>
+      <view class="hero-copy"><text class="eyebrow">河南 · 天地之中</text><text class="hero-title">豫见<text class="hero-title-accent">中原</text></text><text class="hero-desc">沿黄河读懂华夏，入嵩山听见千年。</text><view class="hero-link">查看 {{hero.name}} <text>↗</text></view></view>
+    </view>
+    <view class="intro-row"><view><text class="eyebrow">精选目的地</text><text class="section-title">循着风物，抵达河南</text></view><text class="section-more" bindtap="openDiscover">全部景点 →</text></view>
+    <view class="quick-grid"><view class="quick-item" bindtap="openDiscover"><text class="quick-icon">⌕</text><text>发现景点</text><text class="quick-note">山水与古迹</text></view><view class="quick-item" bindtap="openItinerary"><text class="quick-icon">▤</text><text>我的行程</text><text class="quick-note">收藏下一站</text></view></view>
+    <scroll-view class="spot-scroll" scroll-x="true" enable-flex="true"><view class="spot-row"><view wx:for="{{featured}}" wx:key="id" class="spot-card" bindtap="openSpot" data-id="{{item.id}}"><image src="{{item.cover}}" mode="aspectFill" lazy-load="true"/><view class="spot-card-body"><text class="spot-city">{{item.city}} · {{item.category}}</text><text class="spot-name">{{item.name}}</text><text class="spot-tagline">{{item.tagline}}</text></view></view></view></scroll-view>
+    <view class="culture-band"><text class="eyebrow">中原文化志</text><text class="culture-title">六条脉络，读懂何以中原</text><text class="culture-copy">从史前聚落到古都城阙，河南是一套仍在生活中延续的文明系统。</text></view>
+  </block>
+</view>

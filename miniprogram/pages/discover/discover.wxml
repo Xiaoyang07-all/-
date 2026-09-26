@@ -1,0 +1,9 @@
+<view class="page discover-page">
+  <view class="discover-head"><text class="eyebrow">精选目的地</text><text class="page-title">循着风物，抵达河南</text><text class="subtle">选择一种向往，让旅程从此处展开。</text></view>
+  <view class="search-box"><text>⌕</text><input value="{{query}}" bindinput="onSearch" placeholder="搜索城市或景点" confirm-type="search" /></view>
+  <scroll-view scroll-x="true" class="category-scroll"><view class="category-row"><view wx:for="{{categories}}" wx:key="*this" class="category {{category === item ? 'active' : ''}}" data-category="{{item}}" bindtap="selectCategory">{{item}}</view></view></scroll-view>
+  <view wx:if="{{error}}" class="error-panel"><text>{{error}}</text><button bindtap="loadSpots">重新连接</button></view>
+  <view wx:elif="{{loading}}" class="loading"><text>正在整理景点</text></view>
+  <view wx:elif="{{!spots.length}}" class="empty">暂时没有符合条件的目的地</view>
+  <view wx:else class="spot-list"><view wx:for="{{spots}}" wx:key="id" class="list-card" bindtap="openSpot" data-id="{{item.id}}"><image src="{{item.cover}}" mode="aspectFill" lazy-load="true"/><view class="list-body"><view class="list-meta"><text>{{item.city}}</text><text>{{item.category}}</text></view><text class="list-name">{{item.name}}</text><text class="list-tagline">{{item.tagline}}</text><text class="list-ticket">{{item.ticket}} · {{item.duration}}</text></view><button class="bookmark {{item.bookmarked ? 'active' : ''}}" catchtap="toggleBookmark" data-id="{{item.id}}">{{item.bookmarked ? '♥' : '♡'}}</button></view></view>
+</view>

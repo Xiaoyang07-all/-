@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/discover/discover",
+    "pages/detail/detail",
+    "pages/itinerary/itinerary",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "豫见中原",
+    "navigationBarBackgroundColor": "#f4f0e7",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f4f0e7",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#77756d",
+    "selectedColor": "#a93f2d",
+    "backgroundColor": "#fffdf8",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/discover/discover", "text": "发现" },
+      { "pagePath": "pages/itinerary/itinerary", "text": "行程" },
+      { "pagePath": "pages/profile/profile", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

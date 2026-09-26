@@ -1,0 +1,23 @@
+@import "../../styles/common.wxss";
+.itinerary-head { padding: 48rpx 42rpx 32rpx; }
+.itinerary-head .page-title { display: block; margin-top: 14rpx; }
+.itinerary-head .subtle { display: block; margin-top: 16rpx; line-height: 1.7; }
+.empty-panel { display: flex; flex-direction: column; align-items: center; padding: 130rpx 60rpx; text-align: center; }
+.empty-mark { display: grid; place-items: center; width: 112rpx; height: 112rpx; border: 1px solid rgba(169,63,45,.3); border-radius: 50%; color: #a93f2d; font-family: serif; font-size: 52rpx; }
+.empty-title { margin-top: 28rpx; font-family: serif; font-size: 36rpx; }
+.empty-panel .subtle { margin-top: 14rpx; line-height: 1.7; }
+.empty-panel button { width: 270rpx; height: 76rpx; margin-top: 34rpx; border: 0; border-radius: 2rpx; background: #a93f2d; color: white; font-size: 25rpx; }
+.timeline { padding: 0 42rpx 40rpx; }
+.timeline-item { position: relative; padding-left: 88rpx; padding-bottom: 28rpx; }
+.timeline-item::before { content: ""; position: absolute; left: 27rpx; top: 42rpx; bottom: -2rpx; width: 1px; background: rgba(169,63,45,.3); }
+.timeline-item:last-child::before { display: none; }
+.timeline-date { position: absolute; left: 0; top: 0; display: flex; flex-direction: column; gap: 5rpx; width: 70rpx; color: #a93f2d; font-size: 18rpx; }
+.timeline-date text:first-child { font-weight: 700; line-height: 1.25; word-break: break-all; }
+.timeline-date text:last-child { color: #77756d; font-size: 16rpx; }
+.itinerary-card { position: relative; display: flex; min-height: 180rpx; overflow: hidden; background: #fffdf8; box-shadow: 0 8rpx 24rpx rgba(30,25,18,.07); }
+.itinerary-card image { width: 190rpx; height: 180rpx; flex: 0 0 190rpx; }
+.itinerary-body { padding: 24rpx; }
+.itinerary-city { display: block; color: #a93f2d; font-size: 19rpx; }
+.itinerary-name { display: block; margin-top: 10rpx; font-family: serif; font-size: 32rpx; }
+.itinerary-link { display: block; margin-top: 28rpx; color: #77756d; font-size: 21rpx; }
+.remove { position: absolute; top: 8rpx; right: 8rpx; width: 42rpx; height: 42rpx; margin: 0; padding: 0; border: 0; background: transparent; color: #77756d; font-size: 34rpx; line-height: 42rpx; }

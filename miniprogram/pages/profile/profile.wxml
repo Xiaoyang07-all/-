@@ -1,0 +1,6 @@
+<view class="page profile-page">
+  <view class="profile-hero"><view class="seal">豫</view><view><text class="profile-name">中原行者</text><text class="profile-sub">微信用户 · 本机行程</text></view></view>
+  <view class="stats"><view><text>{{bookmarkCount}}</text><text>收藏景点</text></view><view><text>{{itineraryCount}}</text><text>行程目的地</text></view></view>
+  <view class="profile-section"><text class="section-label">快捷入口</text><view class="profile-link" bindtap="openDiscover"><text>发现更多河南</text><text>→</text></view><view class="profile-link" bindtap="clearLocalData"><text>清空本机收藏与行程</text><text>›</text></view></view>
+  <view class="profile-section about"><text class="section-label">关于小程序</text><text class="about-title">豫见中原</text><text class="about-copy">河南旅游介绍与线上观景平台。内容与景点数据来自同一套服务端，收藏和行程保存在当前微信设备。</text><text class="about-api">当前 API：{{apiBase}}</text></view>
+</view>

@@ -1,0 +1,13 @@
+<view class="page detail-page">
+  <view wx:if="{{loading}}" class="loading"><text>正在展开景点详情</text></view>
+  <view wx:elif="{{error}}" class="empty">{{error}}</view>
+  <block wx:else>
+    <swiper class="gallery" indicator-dots="true" indicator-color="rgba(255,255,255,.55)" indicator-active-color="#e8c991" circular="true"><swiper-item wx:for="{{galleryDisplay}}" wx:key="*this"><image src="{{item}}" mode="aspectFill" /></swiper-item></swiper>
+    <view class="detail-intro"><view class="detail-meta"><text>{{spot.city}}</text><text>{{spot.category}}</text><text>{{spot.era}}</text></view><text class="detail-title">{{spot.name}}</text><text class="detail-tagline">{{spot.tagline}}</text><view class="action-row"><button class="bookmark-button {{bookmarked ? 'active' : ''}}" bindtap="toggleBookmark">{{bookmarked ? '♥ 已收藏' : '♡ 收藏'}}</button><button class="map-button" bindtap="openMap">⌖ 到这里</button></view></view>
+    <view class="detail-section"><text class="section-label">景点印象</text><text class="detail-text">{{spot.description}}</text></view>
+    <view class="detail-section split"><view><text class="section-label">建议游览</text><text class="detail-value">{{spot.duration}}</text></view><view><text class="section-label">最佳季节</text><text class="detail-value">{{spot.bestSeason}}</text></view><view><text class="section-label">游览强度</text><text class="detail-value">{{spot.intensity}}</text></view></view>
+    <view class="detail-section"><text class="section-label">推荐路线</text><view class="route"><view wx:for="{{spot.route}}" wx:key="*this" class="route-item"><text>{{index + 1}}</text><text>{{item}}</text></view></view></view>
+    <view class="detail-section"><text class="section-label">出行提示</text><view wx:for="{{spot.tips}}" wx:key="*this" class="tip"><text>·</text><text>{{item}}</text></view></view>
+    <view class="plan-box"><view><text class="plan-title">把它放进你的河南行程</text><text class="subtle">行程保存在本机，打开微信即可查看。</text></view><picker mode="date" value="{{date}}" start="2024-01-01" bindchange="onDateChange"><view class="date-picker">{{date}} ▾</view></picker><button class="plan-button" bindtap="toggleItinerary">{{planned ? '已加入行程' : '加入行程'}}</button></view>
+  </block>
+</view>
